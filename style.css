@@ -1,24 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Me - Joud Alghofaili</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-  <header>
-    <h1>About Me</h1>
-  </header>
-  <main>
-    <section>
-      <p>I’m Joud Alghofaili, a senior Computer Science student at Qassim University. I specialize in network engineering and cybersecurity.</p>
-      <p>I enjoy working on secure systems, analyzing traffic, and developing Java-based applications.</p>
-    </section>
-  </main>
-</body>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+nav {
+  background-color: #d35400;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #f39c12;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
 </html>
