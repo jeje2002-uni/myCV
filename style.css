@@ -24,8 +24,8 @@ nav a:hover {
 }
 
 header {
-  background-color: #e1bee7; /* Lighter purple */
-  color: #4a148c; /* Dark purple */
+  background-color: #e1bee7; 
+  color: #4a148c; 
   padding: 2em;
   text-align: center;
 }
@@ -51,8 +51,8 @@ section {
   text-align: center;
 }
 footer {
-  background-color: #d35400;
-  color: white;
+  background-color: #e1bee7;
+  color: #4a148c;
   text-align: center;
   padding: 20px 0;
   margin-top: 60px;
