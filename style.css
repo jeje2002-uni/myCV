@@ -1,19 +1,19 @@
-/* ROOT VARIABLES: Light mode default colors and font */
+/* GLOBAL VARIABLES */
 :root {
-  --bg: #f0f4f8;              /* Light background color */
-  --text: #1a1a1a;            /* Dark text */
-  --primary: #0a3d62;         /* Header/Footer dark blue */
-  --font: 'Tajawal', sans-serif; /* Google font */
+  --bg: #f0f4f8;              /* Light mode background */
+  --text: #1a1a1a;            /* Light mode text */
+  --primary: #0a3d62;         /* Dark blue for header/footer */
+  --font: 'Tajawal', sans-serif;
 }
 
-/* DARK MODE: overrides root colors when body has class "dark" */
+/* DARK MODE OVERRIDES */
 body.dark {
   --bg: #1c1c2d;              /* Dark background */
   --text: #e4e4f0;            /* Light text */
-  --primary: #0e5d96;         /* Blue tone for header/footer in dark mode */
+  --primary: #0e5d96;         /* Blue in dark mode */
 }
 
-/* BASE BODY SETUP */
+/* PAGE BODY STYLING */
 body {
   font-family: var(--font);
   background-color: var(--bg);
@@ -25,34 +25,34 @@ body {
   flex-direction: column;
 }
 
-/* HEADER STYLES */
+/* HEADER BAR */
 header {
-  background-color: var(--primary);  /* Dynamic: light or dark */
+  background-color: var(--primary);
   color: white;
   padding: 1rem 2rem;
 }
 
-/* NAVIGATION BAR SETUP */
+/* NAVIGATION LAYOUT */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* LOGO STYLING */
+/* LOGO IMAGE */
 .logo img {
   width: 60px;
   height: auto;
 }
 
-/* CENTER THE NAV LINKS */
+/* CENTER NAVIGATION LINKS */
 .nav-center {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* NAVIGATION LINKS */
+/* LINKS STYLE */
 nav ul {
   display: flex;
   gap: 2rem;
@@ -61,20 +61,18 @@ nav ul {
   margin: 0;
 }
 
-/* LINK APPEARANCE */
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* HOVER EFFECT FOR LINKS */
 nav a:hover {
-  color: #ffd700;                /* Gold on hover */
+  color: #ffd700;
   transition: color 0.3s;
 }
 
-/* DARK/LIGHT MODE TOGGLE BUTTON */
+/* TOGGLE BUTTON */
 button {
   background: none;
   border: none;
@@ -83,7 +81,7 @@ button {
   cursor: pointer;
 }
 
-/* MAIN CONTENT STYLING */
+/* MAIN CONTENT */
 main {
   flex: 1;
   display: flex;
@@ -93,7 +91,7 @@ main {
   padding: 2rem;
 }
 
-/* FOOTER STYLING */
+/* FOOTER */
 footer {
   background-color: var(--primary);
   color: white;
@@ -101,7 +99,7 @@ footer {
   padding: 1rem;
 }
 
-/* ANIMATION FOR LOGO FADE-IN */
+/* LOGO ANIMATION */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -113,34 +111,33 @@ footer {
   }
 }
 
-/* APPLY ANIMATION TO LOGO */
 .animate-logo {
   animation: fadeInScale 1s ease-out forwards;
   opacity: 0;
 }
 
-/* RESPONSIVE STYLES FOR SMALL SCREENS */
+/* ✅ RESPONSIVE FIXED: Keep nav horizontal on small screens */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;      /* keep everything in one row */
+    flex-wrap: wrap;          /* allow wrapping if space is tight */
+    align-items: center;
   }
 
   .nav-center {
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
+    width: auto;
   }
 
   nav ul {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;      /* keep links in a row */
     gap: 1rem;
-    margin-top: 1rem;
+    margin: 0;
   }
 
   button#modeToggle {
-    align-self: flex-end;
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-left: auto;
   }
 
   main {
@@ -149,6 +146,6 @@ footer {
   }
 
   .logo img {
-    width: 50px;
+    width: 50px;              /* smaller logo for mobile */
   }
 }
