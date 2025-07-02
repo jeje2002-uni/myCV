@@ -1,122 +1,154 @@
-/* Root variables: reusable color values and font */
+/* ROOT VARIABLES: Light mode default colors and font */
 :root {
-  --bg: #f0f4f8;            /* Light background color */
-  --text: #1a1a1a;          /* Main text color */
-  --primary: #0a3d62;       /* Dark blue for header/footer/nav */
-  --font: 'Tajawal', sans-serif;  /* Custom font from Google Fonts */
+  --bg: #f0f4f8;              /* Light background color */
+  --text: #1a1a1a;            /* Dark text */
+  --primary: #0a3d62;         /* Header/Footer dark blue */
+  --font: 'Tajawal', sans-serif; /* Google font */
 }
 
-/* Overall body layout and page structure */
+/* DARK MODE: overrides root colors when body has class "dark" */
+body.dark {
+  --bg: #1c1c2d;              /* Dark background */
+  --text: #e4e4f0;            /* Light text */
+  --primary: #0e5d96;         /* Blue tone for header/footer in dark mode */
+}
+
+/* BASE BODY SETUP */
 body {
-  font-family: var(--font);             /* Apply custom font to entire body */
-  background-color: var(--bg);          /* Set the background color */
-  color: var(--text);                   /* Default text color */
-  line-height: 1.8;                     /* Space between lines */
-  margin: 0;                            /* Remove default margin */
-  min-height: 100vh;                    /* Minimum height = full viewport */
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;              /* Stack header, main, footer vertically */
+  flex-direction: column;
 }
 
-/* Header bar (top of page) */
+/* HEADER STYLES */
 header {
-  background-color: var(--primary);    /* Dark blue background */
-  color: white;                        /* White text for contrast */
-  padding: 1rem 2rem;                  /* Space inside the header */
+  background-color: var(--primary);  /* Dynamic: light or dark */
+  color: white;
+  padding: 1rem 2rem;
 }
 
-/* Navigation layout */
+/* NAVIGATION BAR SETUP */
 nav {
-  display: flex;                        /* Horizontal layout */
-  justify-content: space-between;      /* Spread logo, links, and toggle */
-  align-items: center;                 /* Vertically center everything */
-}
-
-/* Logo image style */
-.logo img {
-  width: 60px;                          /* Fixed width for logo */
-  height: auto;                         /* Keep original height ratio */
-}
-
-/* Center area that contains the menu links */
-.nav-center {
-  flex: 1;                              /* Take all available space */
   display: flex;
-  justify-content: center;             /* Center the nav links horizontally */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Menu links styling */
+/* LOGO STYLING */
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* CENTER THE NAV LINKS */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* NAVIGATION LINKS */
 nav ul {
-  display: flex;                        /* Horizontal list */
-  gap: 2rem;                            /* Space between each link */
-  list-style: none;                    /* Remove bullet points */
+  display: flex;
+  gap: 2rem;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Style for nav links */
+/* LINK APPEARANCE */
 nav a {
-  color: white;                         /* White links in dark header */
-  text-decoration: none;               /* Remove underline */
-  font-weight: bold;                   /* Make links bold */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Hover effect on links */
+/* HOVER EFFECT FOR LINKS */
 nav a:hover {
-  color: #ffd700;                       /* Golden color on hover */
-  transition: color 0.3s;              /* Smooth color transition */
+  color: #ffd700;                /* Gold on hover */
+  transition: color 0.3s;
 }
 
-/* Dark/light toggle button style */
+/* DARK/LIGHT MODE TOGGLE BUTTON */
 button {
-  background: none;                    /* No background */
-  border: none;                        /* No border */
-  color: white;                        /* Match header text */
+  background: none;
+  border: none;
+  color: white;
   font-size: 1rem;
-  cursor: pointer;                     /* Cursor changes on hover */
+  cursor: pointer;
 }
 
-/* Main content area */
+/* MAIN CONTENT STYLING */
 main {
-  flex: 1;                              /* Take up all remaining space */
+  flex: 1;
   display: flex;
-  justify-content: center;             /* Center horizontally */
-  align-items: center;                 /* Center vertically */
-  text-align: center;                  /* Align text in center */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 2rem;
 }
 
-/* Footer at the bottom */
+/* FOOTER STYLING */
 footer {
-  background-color: var(--primary);    /* Same color as header */
+  background-color: var(--primary);
   color: white;
-  text-align: center;                  /* Center footer text */
+  text-align: center;
   padding: 1rem;
 }
 
-/* Logo animation on load */
+/* ANIMATION FOR LOGO FADE-IN */
 @keyframes fadeInScale {
   0% {
-    opacity: 0;                        /* Start hidden */
-    transform: scale(0.8) translateY(-20px);  /* Shrink and move up */
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
   }
   100% {
-    opacity: 1;                        /* Fully visible */
-    transform: scale(1) translateY(0);        /* Normal size and position */
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
-/* Apply animation to logo */
+/* APPLY ANIMATION TO LOGO */
 .animate-logo {
   animation: fadeInScale 1s ease-out forwards;
-  opacity: 0;                          /* Initial state before animation */
+  opacity: 0;
 }
 
-/* Responsive Design (for screens smaller than 768px) */
+/* RESPONSIVE STYLES FOR SMALL SCREENS */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;            /* Stack logo, nav, and button vertically */
+    flex-direction: column;
     align-items: flex-start;
   }
 
   .nav-center {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  button#modeToggle {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+}
