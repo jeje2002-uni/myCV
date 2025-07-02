@@ -1,39 +1,67 @@
 <!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Ensures proper scaling and rendering on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title of the tab shown in the browser -->
   <title>Joud Alghofaili - Home</title>
+
+  <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Tajawal for custom typography -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- HEADER: Contains the top navigation bar -->
   <header>
     <nav>
+      <!-- Left Side: Logo -->
       <div class="logo animate-logo">
-        <a href="index.html"><img src="images/logo.png" alt="Joud Logo" /></a>
+        <!-- Clicking logo takes you to homepage -->
+        <a href="index.html">
+          <img src="images/logo.png" alt="Joud Logo" />
+        </a>
       </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><button id="modeToggle">🌓</button></li>
-      </ul>
+
+      <!-- Center Navigation Links -->
+      <div class="nav-center">
+        <ul>
+          <!-- Link to homepage -->
+          <li><a href="index.html">Home</a></li>
+          <!-- Link to About page -->
+          <li><a href="about.html">About</a></li>
+          <!-- Link to Projects page -->
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Button to toggle dark/light mode -->
+      <button id="modeToggle">🌓</button>
     </nav>
   </header>
 
+  <!-- MAIN: Main content of the homepage -->
   <main>
     <section>
+      <!-- Main heading -->
       <h1>Welcome to My Portfolio</h1>
+      <!-- Subtitle or brief info -->
       <p>Senior Computer Science Student • Cybersecurity & Network Engineering</p>
+      <!-- Extra welcome message -->
       <p>Hello!<br>This is my professional portfolio.</p>
     </section>
   </main>
 
+  <!-- FOOTER: Copyright message at the bottom -->
   <footer>
     <p>© 2025 Joud Alghofaili. All rights reserved.</p>
   </footer>
 
+  <!-- Link to JavaScript functionality -->
   <script src="script.js"></script>
 </body>
 </html>

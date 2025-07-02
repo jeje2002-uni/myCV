@@ -1,31 +1,48 @@
 <!DOCTYPE html>
+<!-- HTML5 structure -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Responsive viewport for mobile screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Joud Alghofaili</title>
+
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Tajawal font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- HEADER navigation -->
   <header>
     <nav>
+      <!-- Left logo -->
       <div class="logo animate-logo">
         <a href="index.html"><img src="images/logo.png" alt="Joud Logo" /></a>
       </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><button id="modeToggle">🌓</button></li>
-      </ul>
+
+      <!-- Center navigation links -->
+      <div class="nav-center">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Right toggle button -->
+      <button id="modeToggle">🌓</button>
     </nav>
   </header>
 
+  <!-- MAIN project section -->
   <main>
     <section>
       <h2>Projects</h2>
 
+      <!-- Project 1 -->
       <div class="project">
         <h3>Library Management System</h3>
         <p>
@@ -33,6 +50,7 @@
         </p>
       </div>
 
+      <!-- Project 2 -->
       <div class="project">
         <h3>Delay Optimization System</h3>
         <p>
@@ -42,10 +60,12 @@
     </section>
   </main>
 
+  <!-- FOOTER at bottom -->
   <footer>
     <p>© 2025 Joud Alghofaili. All rights reserved.</p>
   </footer>
 
+  <!-- JavaScript toggle logic -->
   <script src="script.js"></script>
 </body>
 </html>

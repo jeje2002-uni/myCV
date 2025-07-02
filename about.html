@@ -1,42 +1,60 @@
 <!DOCTYPE html>
+<!-- HTML5 document type declaration -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Ensure responsive layout on all screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title shown in browser tab -->
   <title>About - Joud Alghofaili</title>
+
+  <!-- Link to the main CSS file -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Import Tajawal font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- HEADER: same structure as other pages -->
   <header>
     <nav>
+      <!-- Logo on the left -->
       <div class="logo animate-logo">
         <a href="index.html"><img src="images/logo.png" alt="Joud Logo" /></a>
       </div>
-      <ul>
-       
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><button id="modeToggle">🌓</button></li>
-      </ul>
+
+      <!-- Centered navigation links -->
+      <div class="nav-center">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Dark/light mode toggle button -->
+      <button id="modeToggle">🌓</button>
     </nav>
   </header>
 
+  <!-- MAIN content section -->
   <main>
     <section>
       <h2>About Me</h2>
       <p>
-        I'm Joud Alghofaili, a senior Computer Science student at Qassim University. I specialize in network engineering and cybersecurity.<br><br>
-        I enjoy working on secure systems, analyzing traffic, and developing Java-based applications.
+        I'm Joud Alghofaili, a senior Computer Science student at Qassim University.<br><br>
+        I specialize in network engineering and cybersecurity. I enjoy working on secure systems, analyzing traffic, and building Java-based tools.
       </p>
     </section>
   </main>
 
+  <!-- FOOTER at the bottom of the page -->
   <footer>
     <p>© 2025 Joud Alghofaili. All rights reserved.</p>
   </footer>
 
+  <!-- Link to script for dark mode toggle -->
   <script src="script.js"></script>
 </body>
 </html>
