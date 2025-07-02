@@ -1,60 +1,88 @@
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --bg: #f0f4f8;
+  --text: #1a1a1a;
+  --primary: #4a90e2;
+  --font: 'Tajawal', sans-serif;
+}
+
+body.dark {
+  --bg: #1c1c2d;
+  --text: #e4e4f0;
+  --primary: #6cb7ff;
+}
+
+* {
   margin: 0;
   padding: 0;
-  background-color: #fce4ec; /* Light pink */
-  color: #4a148c; /* Dark purple */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-nav {
-  background-color: #9c27b0; /* Purple */
-  padding: 1em;
-  text-align: center;
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
 }
 
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-header {
-  background-color: #e1bee7; 
-  color: #4a148c; 
-  padding: 2em;
-  text-align: center;
-}
-
-main {
-  padding: 2em;
-}
-
-section {
-  margin-bottom: 2em;
-}
-
-main {
-  padding: 2em;
+header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a,
+button {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 section {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  padding: 60px 0;
+  border-bottom: 1px solid #ccc;
 }
+
 footer {
-  background-color: #e1bee7;
-  color: #4a148c;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 60px;
-  font-size: 14px;
+  margin-top: 2rem;
+  color: var(--primary);
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-logo {
+  animation: fadeInScale 1s ease-out forwards;
+  opacity: 0;
+}
+
+.project {
+  margin-bottom: 2rem;
 }

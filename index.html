@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Me - Joud Alghofaili</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joud Alghofaili - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-  
-  </nav>
   <header>
-    <h1>About Me</h1>
+    <nav>
+      <div class="logo animate-logo">
+        <a href="#home">
+          <img src="images/logo.png" alt="Joud Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><button id="modeToggle">🌓</button></li>
+      </ul>
+    </nav>
   </header>
+
   <main>
-    <section>
-      <p>I’m Joud Alghofaili, a senior Computer Science student at Qassim University. I specialize in network engineering and cybersecurity.</p>
-      <p>I enjoy working on secure systems, analyzing traffic, and developing Java-based applications.</p>
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Senior Computer Science Student • Cybersecurity & Network Engineering</p>
+      <p>Hello!<br>This is my professional portfolio.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm Joud Alghofaili, a senior Computer Science student at Qassim University. I specialize in network engineering and cybersecurity.
+        <br><br>
+        I enjoy working on secure systems, analyzing traffic, and developing Java-based applications.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Library Management System</h3>
+        <p>
+          Java desktop app with login, GUI, profile editing, and database. Built for CS341.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Delay Optimization System</h3>
+        <p>
+          Python-based system using Dijkstra's and knapsack algorithm to optimize shipping. Built for CS315.
+        </p>
+      </div>
     </section>
   </main>
-  <!-- Font Awesome icon support -->
-<script src="https://kit.fontawesome.com/a2e8bcb443.js" crossorigin="anonymous"></script>
 
-<footer>
-  <div class="container">
+  <footer>
     <p>© 2025 Joud Alghofaili. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
